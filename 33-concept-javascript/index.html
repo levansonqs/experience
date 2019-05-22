@@ -1,0 +1,832 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><style data-href="/experience/styles.3e9765e10fe87f91c4cb.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/experience/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/experience/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/experience/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/experience/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/experience/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/experience/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/experience/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/experience/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/experience/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/experience/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/experience/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/experience/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/experience/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/experience/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/experience/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/experience/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/experience/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/experience/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/experience/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/experience/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/experience/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/experience/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/experience/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/experience/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/experience/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/experience/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/experience/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/experience/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/experience/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/experience/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/experience/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/experience/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/experience/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/experience/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/experience/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/experience/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/experience/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/experience/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/experience/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/experience/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/experience/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/experience/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/experience/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/experience/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/experience/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/experience/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/experience/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/experience/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/experience/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/experience/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/experience/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/experience/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}</style><meta name="generator" content="Gatsby 2.5.5"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/experience/rss.xml"/><link rel="shortcut icon" href="/experience/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/experience/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/experience/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/experience/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/experience/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/experience/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/experience/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/experience/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/experience/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/experience/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><title data-react-helmet="true">33 concept javascript | FullStackJs</title><meta data-react-helmet="true" name="description" content="Giới thiệuRepository này được tạo ra với mục đích giúp các nhà phát triển nắm vững các khái niệm trong JavaScript. Nó không phải là bắt buộc, nhưng là một hướng…"/><meta data-react-helmet="true" property="og:title" content="33 concept javascript"/><meta data-react-helmet="true" property="og:description" content="Giới thiệuRepository này được tạo ra với mục đích giúp các nhà phát triển nắm vững các khái niệm trong JavaScript. Nó không phải là bắt buộc, nhưng là một hướng…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Le Van Son"/><meta data-react-helmet="true" name="twitter:title" content="33 concept javascript"/><meta data-react-helmet="true" name="twitter:description" content="Giới thiệuRepository này được tạo ra với mục đích giúp các nhà phát triển nắm vững các khái niệm trong JavaScript. Nó không phải là bắt buộc, nhưng là một hướng…"/><link as="script" rel="preload" href="/experience/webpack-runtime-3cca2b0c33b2ff29a237.js"/><link as="script" rel="preload" href="/experience/styles-565f081c8374bbda155f.js"/><link as="script" rel="preload" href="/experience/app-2dbad5151491a83c642c.js"/><link as="script" rel="preload" href="/experience/0-0180cd94ef2497ac7db8.js"/><link as="script" rel="preload" href="/experience/component---src-templates-blog-post-js-3d09bd6d550f756e9c6c.js"/><link as="fetch" rel="preload" href="/experience/static/d/636/path---33-concept-javascript-240-279-bA1kgF6J86EEOb49HjmkRyKCk.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/experience/">FullStackJs</a></h3></header><main><h1>33 concept javascript</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">May 21, 2019</p><div><h2>Giới thiệu</h2>
+<p>Repository này được tạo ra với mục đích giúp các nhà phát triển nắm vững các khái niệm trong JavaScript. Nó không phải là bắt buộc, nhưng là một hướng dẫn cho các nghiên cứu trong tương lai. Repo này được viết bởi <a href="https://twitter.com/stephenthecurt">Stephen Curtis</a> và bạn có thể đọc nó <a href="https://medium.com/@stephenthecurt/33-fundamentals-every-javascript-developer-should-know-13dd720a90d1">ở đây</a>.</p>
+<h2>Cộng đồng</h2>
+<p>Vui lòng gửi PR để thêm liên kết tới bản tóm tắt hoặc bài đánh giá của riêng bạn. Nếu bạn muốn dịch repo sang ngôn ngữ mẹ đẻ của bạn, hãy làm thoải mái nhé.</p>
+<p>Tất cả bản dịch cho repo này sẽ được liệt kê bên dưới:</p>
+<ul>
+<li><a href="https://github.com/stephentian/33-js-concepts">Chinese</a> — Re Tian</li>
+<li><a href="https://github.com/tiagoboeing/33-js-concepts">Portuguese-BR</a> — Tiago Boeing</li>
+<li><a href="https://github.com/yjs03057/33-js-concepts.git">Korean</a> — Suin Lee</li>
+<li><a href="https://github.com/adonismendozaperez/33-js-conceptos">Spanish</a> — Adonis Mendoza</li>
+<li><a href="https://github.com/ilker0/33-js-concepts">Turkish</a> — İlker Demir</li>
+<li><a href="https://github.com/gumennii/33-js-concepts">Russian</a> — Mihail Gumennii</li>
+<li><a href="https://github.com/nguyentranchung/33-js-concepts">Tiếng Việt</a> — Nguyễn Trần Chung</li>
+</ul>
+<hr>
+<h2>Mục lục</h2>
+<ol>
+<li><strong><a href="#1-call-stack">Call Stack</a></strong></li>
+<li><strong><a href="#2-primitive-types">Primitive Types</a></strong> Kiểu dữ liệu nguyên thủy</li>
+<li><strong><a href="#3-value-types-and-reference-types">Value Types and Reference Types</a></strong></li>
+<li><strong><a href="#4-implicit-explicit-nominal-structuring-and-duck-typing">Implicit, Explicit, Nominal, Structuring and Duck Typing</a></strong></li>
+<li><strong><a href="#5--vs--vs-typeof">== vs === vs typeof</a></strong></li>
+<li><strong><a href="#6-function-scope-block-scope-and-lexical-scope">Function Scope, Block Scope and Lexical Scope</a></strong></li>
+<li><strong><a href="#7-expression-vs-statement">Expression vs Statement</a></strong> Biểu thức, câu lệnh.</li>
+<li><strong><a href="#8-iife-modules-and-namespaces">IIFE, Modules and Namespaces</a></strong></li>
+<li><strong><a href="#9-message-queue-and-event-loop">Message Queue and Event Loop</a></strong></li>
+<li><strong><a href="#10-settimeout-setinterval-and-requestanimationframe">setTimeout, setInterval and requestAnimationFrame</a></strong></li>
+<li><strong><a href="#11-javascript-engines">JavaScript Engines</a></strong> Trình thông dịch mã Javascript</li>
+<li><strong><a href="#12-bitwise-operators-type-arrays-and-array-buffers">Bitwise Operators, Type Arrays and Array Buffers</a></strong></li>
+<li><strong><a href="#13-dom-and-layout-trees">DOM and Layout Trees</a></strong></li>
+<li><strong><a href="#14-factories-and-classes">Factories and Classes</a></strong></li>
+<li><strong><a href="#15-this-call-apply-and-bind">this, call, apply and bind</a></strong></li>
+<li><strong><a href="#16-new-constructor-instanceof-and-instances">new, Constructor, instanceof and Instances</a></strong></li>
+<li><strong><a href="#17-prototype-inheritance-and-prototype-chain">Prototype Inheritance and Prototype Chain</a></strong></li>
+<li><strong><a href="#18-objectcreate-and-objectassign">Object.create and Object.assign</a></strong></li>
+<li><strong><a href="#19-map-reduce-filter">map, reduce, filter</a></strong></li>
+<li><strong><a href="#20-pure-functions-side-effects-and-state-mutation">Pure Functions, Side Effects and State Mutation</a></strong></li>
+<li><strong><a href="#21-closures">Closures</a></strong></li>
+<li><strong><a href="#22-high-order-functions">High Order Functions</a></strong></li>
+<li><strong><a href="#23-recursion">Recursion</a></strong> Đệ quy</li>
+<li><strong><a href="#24-collections-and-generators">Collections and Generators</a></strong></li>
+<li><strong><a href="#25-promises">Promises</a></strong> Đồng bộ Promises</li>
+<li><strong><a href="#26-asyncawait">async/await</a></strong> Đồng độ async/await</li>
+<li><strong><a href="#27-data-structures">Data Structures</a></strong> Cấu trúc dữ liệu</li>
+<li><strong><a href="#28-expensive-operation-and-big-o-notation">Expensive Operation and Big O Notation</a></strong> Hoạt động tốn kém và Ký hiệu O lớn</li>
+<li><strong><a href="#29-algorithms">Algorithms</a></strong> Thuật toán</li>
+<li><strong><a href="#30-inheritance-polymorphism-and-code-reuse">Inheritance, Polymorphism and Code Reuse</a></strong> Thừa kế, đa hình và tái sử dụng code</li>
+<li><strong><a href="#31-design-patterns">Design Patterns</a></strong> Khuôn mẫu thiết kế</li>
+<li><strong><a href="#32-partial-applications-currying-compose-and-pipe">Partial Applications, Currying, Compose and Pipe</a></strong></li>
+<li><strong><a href="#33-clean-code">Clean Code</a></strong> Code sạch</li>
+</ol>
+<hr>
+<h2>1. Call Stack</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec">Understanding Javascript Call Stack, Event Loops — Gaurav Pandvia</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/understanding-the-javascript-call-stack-861e41ae61d4">Understanding the JavaScript Call Stack — Charles Freeborn</a></li>
+<li>📜 <a href="https://www.valentinog.com/blog/js-execution-context-call-stack/">Javascript: What Is The Execution Context? What Is The Call Stack? — Valentino Gagliardi</a></li>
+<li>📜 <a href="https://gist.github.com/jesstelford/9a35d20a2aa044df8bf241e00d7bc2d0">What is the JS Event Loop and Call Stack? — Jess Telford</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Call_stack">Call Stack — MDN</a></li>
+<li>📜 <a href="https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0">Understanding Execution Context and Execution Stack in Javascript — Sukhjinder Arora</a></li>
+<li>📜 <a href="https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf">How JavaScript Works: An Overview of the Engine, the Runtime, and the Call Stack — Alexander Zlatkov</a></li>
+<li>📜 <a href="https://tylermcginnis.com/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/">The Ultimate Guide to Execution Contexts, Hoisting, Scopes, and Closures in JavaScript — Tyler McGinnis</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=w6QGEiQceOM">Javascript: the Call Stack explained — Coding Blocks India</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=W8AeMrVtFLY">The JS Call Stack Explained In 9 Minutes — Colt Steele</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=jT0USJeNFEA">JavaScript Execution Stack — Codecademy</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=w7QWQlkLY_s">What is the Call Stack? — Eric Traub</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Q2sFmqvpBe0">The Call Stack — Kevin Drumm</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Z6a1cLyq7Ac&#x26;list=PLWrQZnG8l0E4kd1T_nyuVoxQUaYEWFgcD">Understanding JavaScript Execution — Codesmith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=mk0lu9MKBto">Call Stack &#x26; Event Loop — movies com</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Nt-qa_LlUH0">The Ultimate Guide to Execution Contexts, Hoisting, Scopes, and Closures in JavaScript — Tyler McGinnis</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>2. Primitive Types</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="http://2ality.com/2012/04/number-encoding.html">How numbers are encoded in JavaScript — Dr. Axel Rauschmayer</a></li>
+<li>📜 <a href="https://medium.com/dailyjs/javascripts-number-type-8d59199db1b6">What You Need to Know About JavaScript Number Type — Max Wizard K</a></li>
+<li>📜 <a href="https://blog.chewxy.com/2014/02/24/what-every-javascript-developer-should-know-about-floating-point-numbers/">What Every JavaScript Developer Should Know About Floating Point Numbers — Chewxy</a></li>
+<li>📜 <a href="https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/">The Secret Life of JavaScript Primitives — Angus Croll</a></li>
+<li>📜 <a href="https://flow.org/en/docs/types/primitives/">Primitive Types — Flow</a></li>
+<li>📜 <a href="http://blog.brew.com.hk/not-everything-in-javascript-is-an-object/">(Not) Everything in JavaScript is an Object - Daniel Li</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values">JavaScript data types and data structures - MDN</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=9ooYYRLdg_g">JavaScript Reference vs Primitive Types — Academind</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=HsbWQsSCE5Y">JavaScript Primitive Types — Simon Sez IT</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=F7YbhKbpFic">Javascript Primitive and Reference Types — Baljeet Singh</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=e-_mDyqm2oU">Value Types and Reference Types in JavaScript — Programming with Mosh</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=qw3j0A3DIzQ">JavaScript Primitive Data Types — Avelx</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=MqHDDtVYJRI">Everything you never wanted to know about JavaScript numbers — Bartek Szopka</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>3. Value Types and Reference Types</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0">Explaining Value vs. Reference in Javascript — Arnav Aggarwal</a></li>
+<li>📜 <a href="https://www.zsoltnagy.eu/understand-value-and-reference-types-in-javascript/">Understand Value and Reference Types in JavaScript — Zsolt Nagy</a></li>
+<li>📜 <a href="https://gist.github.com/branneman/7fb06d8a74d7e6d4cbcf75c50fec599c">Primitive Types &#x26; Reference Types in JavaScript — Bran van der Meer</a></li>
+<li>📜 <a href="https://medium.com/@benastontweet/lesson-1b-javascript-fundamentals-380f601ba851">Value Types, Reference Types and Scope in JavaScript — Ben Aston</a></li>
+<li>📜 <a href="https://medium.com/dailyjs/back-to-roots-javascript-value-vs-reference-8fb69d587a18">Back to roots: JavaScript Value vs Reference — Miro Koczka</a></li>
+<li>📜 <a href="https://hackernoon.com/grasp-by-value-and-by-reference-in-javascript-7ed75efa1293">Grasp “By Value” and “By Reference” in JavaScript — Léna Faure</a></li>
+<li>📜 <a href="https://hackernoon.com/javascript-reference-and-copy-variables-b0103074fdf0">JavaScript Reference and Copy Variables — Vítor Capretz</a></li>
+<li>📜 <a href="http://www.javascripttutorial.net/javascript-primitive-vs-reference-values/">JavaScript Primitive vs Reference Values</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=E-dAnFdq8k8">Javascript Pass by Value vs Pass by Reference — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=fD0t_DKREbE">JavaScript Value vs Reference Types — Programming with Mosh</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>4. Implicit, Explicit, Nominal, Structuring and Duck Typing</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://dev.to/promhize/what-you-need-to-know-about-javascripts-implicit-coercion-e23">What you need to know about Javascript’s Implicit Coercion — Promise Tochi</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/js-type-coercion-explained-27ba3d9a2839">JavaScript Type Coercion Explained — Alexey Samoshkin</a></li>
+<li>📜 <a href="https://hackernoon.com/javascript-coercion-explained-545c895213d3">Javascript Coercion Explained — Ben Garrison</a></li>
+<li>📜 <a href="https://stackoverflow.com/questions/19915688/what-exactly-is-type-coercion-in-javascript">What exactly is Type Coercion in Javascript? - Stack Overflow</a></li>
+<li>📜 <a href="https://www.oreilly.com/library/view/you-dont-know/9781491905159/ch04.html">You Don’t Know JS: Types &#x26; Grammar [Book] — Kyle Simpson</a></li>
+<li>📜 <a href="http://blog.brew.com.hk/not-everything-in-javascript-is-an-object/">(Not) Everything in JavaScript is an Object - Daniel Li</a></li>
+<li>📜 <a href="https://thedevs.network/blog/type-coercion-in-javascript-and-why-everyone-gets-it-wrong">Type Coercion in JavaScript, and why everyone gets it wrong.</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=qGyqzN0bjhc&#x26;t">== ? === ??? …#@^% - Shirmung Bielefeld</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=b04Q_vyqEG8">Coercion in Javascript - Hitesh Choudhary</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=z4-8wMSPJyI">JavaScript Questions: What is Coercion? - Steven Hancock</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>5. == vs === vs typeof</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a">JavaScript Double Equals vs. Triple Equals — Brandon Morelli</a></li>
+<li>📜 <a href="https://www.codecademy.com/en/forum_questions/558ea4f5e39efed371000508">What is the difference between =, ==, and === in JS? — Codecademy</a></li>
+<li>📜 <a href="https://bytearcher.com/articles/equality-comparison-operator-javascript/">Should I use === or == equality comparison operator in JavaScript? — Panu Pitkamaki</a></li>
+<li>📜 <a href="https://www.codementor.io/javascript/tutorial/double-equals-and-coercion-in-javascript">== vs === JavaScript: Double Equals and Coercion — AJ Meyghani</a></li>
+<li>📜 <a href="https://www.impressivewebs.com/why-use-triple-equals-javascipt/">Why Use the Triple-Equals Operator in JavaScript? — Louis Lazaris</a></li>
+<li>📜 <a href="https://www.oreilly.com/learning/what-is-the-difference-between-and-in-javascript">What is the difference between == and === in JavaScript? — Craig Buckler</a></li>
+<li>📜 <a href="https://stackoverflow.com/questions/3787901/why-javascripts-typeof-always-return-object">Why javascript’s typeof always return “object”? — Stack Overflow</a></li>
+<li>📜 <a href="http://tobyho.com/2011/01/28/checking-types-in-javascript/">Checking Types in Javascript — Toby Ho</a></li>
+<li>📜 <a href="https://webbjocke.com/javascript-check-data-types/">How to better check data types in JavaScript — Webbjocke</a></li>
+<li>📜 <a href="https://tomeraberba.ch/html/post/checking-for-the-absence-of-a-value-in-javascript.html">Checking for the Absence of a Value in JavaScript — Tomer Aberbach</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=ol_su88I3kw">JavaScript - The typeof operator — Java Brains</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=qPYhTPt_SbQ">Javascript typeof operator — DevDelight</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>6. Function Scope, Block Scope and Lexical Scope</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md">You Don’t Know JS: Scope &#x26; Closures [Book] — Kyle Simpson</a></li>
+<li>📜 <a href="http://www.deadcoderising.com/2017-04-11-es6-var-let-and-const-the-battle-between-function-scope-and-block-scope/">The battle between Function Scope and Block Scope — Marius Herring</a></li>
+<li>📜 <a href="http://adripofjavascript.com/blog/drips/emulating-block-scope-in-javascript.html">Emulating Block Scope in JavaScript — Josh Clanton</a></li>
+<li>📜 <a href="https://medium.com/@josephcardillo/the-difference-between-function-and-block-scope-in-javascript-4296b2322abe">The Difference Between Function and Block Scope in JavaScript — Joseph Cardillo</a></li>
+<li>📜 <a href="https://edgecoders.com/function-scopes-and-block-scopes-in-javascript-25bbd7f293d7">Function Scopes and Block Scopes in JavaScript — Samer Buna</a></li>
+<li>📜 <a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/">Understanding Scope and Context in JavaScript | Ryan Morr</a></li>
+<li>📜 <a href="https://css-tricks.com/javascript-scope-closures/">JavaScript Scope and Closures — Zell Liew</a></li>
+<li>📜 <a href="https://developer.telerik.com/topics/web-development/understanding-scope-in-javascript/">Understanding Scope in JavaScript — Wissam Abirached</a></li>
+<li>📜 <a href="http://speakingjs.com/es5/ch16.html">Speaking JavaScript - Variables: Scopes, Environments, and Closures — Dr. Axel Rauschmayer</a></li>
+<li>📜 <a href="https://scotch.io/tutorials/understanding-scope-in-javascript">Understanding Scope in JavaScript ― Hammad Ahmed</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=SBwoFkRjZvE">What Makes Javascript Weird … and Awesome pt. 4 — LearnCode.academy</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=dhp57T3p760">Variable Scope in JavaScript — Kirupa Chinnathambi</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=aK_nuUAdr8E">JavaScript Block Scope and Function Scope — mmtuts</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=GhNA0r10MmA">What the Heck is Lexical Scope? — NWCalvank</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>7. Expression vs Statement</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://dev.to/promhize/javascript-in-depth-all-you-need-to-know-about-expressions-statements-and-expression-statements-5k2">All you need to know about Javascript’s Expressions, Statements and Expression Statements — Promise Tochi</a></li>
+<li>📜 <a href="https://www.sitepoint.com/function-expressions-vs-declarations/">Function Expressions vs Function Declarations — Paul Wilkins</a></li>
+<li>📜 <a href="https://medium.com/@raviroshan.talk/javascript-function-declaration-vs-expression-f5873b8c7b38">JavaScript Function — Declaration vs Expression — Ravi Roshan</a></li>
+<li>📜 <a href="https://medium.com/@mandeep1012/function-declarations-vs-function-expressions-b43646042052">Function Declarations vs. Function Expressions — Mandeep Singh</a></li>
+<li>📜 <a href="https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/">Function Declarations vs. Function Expressions — Anguls Croll</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=WVyCrI1cHi8">Expressions vs. Statements in JavaScript — Hexlet</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=3jDpNGJkupA">JavaScript - Expression vs. Statement — WebTunings</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=oB5rH_9bqAI">Function Statements and Function Expressions — Codeacademy</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>8. IIFE, Modules and Namespaces</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6">Mastering Immediately-Invoked Function Expressions ― Chandra Gundamaraju</a></li>
+<li>📜 <a href="https://hashnode.com/post/do-es6-modules-make-the-case-of-iifes-obsolete-civ96wet80scqgc538un20es0">Do ES6 Modules make the case of IIFEs obsolete?</a></li>
+<li>📜 <a href="https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/">A 10 minute primer to JavaScript modules, module formats, module loaders and module bundlers ― Jurgen Van de Moere</a></li>
+<li>📜 <a href="http://exploringjs.com/es6/ch_modules.html">Modules ― Exploring JS</a></li>
+<li>📜 <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive — Lin Clark</a></li>
+<li>📜 <a href="https://www.sitepoint.com/understanding-es6-modules/">Understanding ES6 Modules — Craig Buckler</a></li>
+<li>📜 <a href="https://blog.cloud66.com/an-overview-of-es6-modules-in-javascript/">An overview of ES6 Modules in JavaScript — Brent Graham</a></li>
+<li>📜 <a href="https://ponyfoo.com/articles/es6-modules-in-depth">ES6 Modules in Depth — Nicolás Bevacqua</a></li>
+<li>📜 <a href="https://medium.com/dailyjs/es6-modules-node-js-and-the-michael-jackson-solution-828dc244b8b">ES6 modules, Node.js and the Michael Jackson Solution — Alberto Gimeno</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc">JavaScript Modules: A Beginner’s Guide — Preethi Kasireddy</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=3cbiZV4H22c">Immediately Invoked Function Expression - Beau teaches JavaScript — freeCodeCamp</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=I5EntfMeIIQ">Understanding JavaScript IIFE</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=_3oSWwapPKQ">JavaScript Modules: ES6 Import and Export — Kyle Robinson</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=aQr2bV1BPyE">ES6 - Modules — Ryan Christiani</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=fIP4pjAqCtQ">ES6 Modules in the Real World — Sam Thorogood</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=5P04OK6KlXA">ES6 Modules — TempleCoding</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>9. Message Queue and Event Loop</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/front-end-hacking/javascript-event-loop-explained-4cd26af121d4">JavaScript Event Loop Explained — Anoop Raveendran</a></li>
+<li>📜 <a href="https://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/">The JavaScript Event Loop: Explained — Erin Sweson-Healey</a></li>
+<li>📜 <a href="https://www.wptutor.io/web/js/javascript-event-loop">What is the Event Loop in Javascript — WP Tutor.io</a></li>
+<li>📜 <a href="https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40">Understanding JS: The Event Loop — Alexander Kondov</a></li>
+<li>📜 <a href="https://www.zeolearn.com/magazine/understanding-the-javascript-event-loop">Understanding the JavaScript Event Loop — Ashish Gupta</a></li>
+<li>📜 <a href="https://code.likeagirl.io/what-the-heck-is-event-loop-1e414fccef49">Event Loop in Javascript — Manjula Dube</a></li>
+<li>📜 <a href="https://flaviocopes.com/javascript-event-loop/">The JavaScript Event Loop — Flavio Copes</a></li>
+<li>📜 <a href="https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5">How JavaScript works: Event loop — Alexander Zlatkov</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">What the heck is the event loop anyway? | JSConf EU — Philip Roberts</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=XzXIMZMN9k4">JavaScript Event Loop — ComScience Simplified</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=6MXRNXXgP_0">I’m stuck in an Event Loop — Philip Roberts</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=cCOL7MC4Pl0">In The Loop - Jake Archibald | JSConf.Asia 2018</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Eqq2Rb7LzYE">Desmitificando el Event Loop (Spanish)</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>10. setTimeout, setInterval and requestAnimationFrame</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://javascript.info/settimeout-setinterval">setTimeout and setInterval — JavaScript.Info</a></li>
+<li>📜 <a href="https://dev.to/akanksha_9560/why-not-to-use-setinterval--2na9">Why not to use setInterval — Akanksha Sharma</a></li>
+<li>📜 <a href="https://develoger.com/settimeout-vs-setinterval-cff85142555b">setTimeout VS setInterval — Develoger</a></li>
+<li>📜 <a href="https://css-tricks.com/using-requestanimationframe/">Using requestAnimationFrame — Chris Coyier</a></li>
+<li>📜 <a href="http://www.javascriptkit.com/javatutors/requestanimationframe.shtml">Understanding JavaScript’s requestAnimationFrame() — JavaScript Kit</a></li>
+<li>📜 <a href="https://www.amitmerchant.com/Handling-Time-Intervals-In-Javascript/">Handling time intervals in JavaScript - Amit Merchant</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=6bPKyl8WYWI">Javascript: How setTimeout and setInterval works — Coding Blocks India</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=TbCgGWe8LN8">setTimeout and setInterval in JavaScript — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=0VVJSvlUgtg">JavaScript Timers — Steve Griffith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=BVALvvy5bZY">JavaScript setTimeout, setInterval &#x26; clearInterval — DoingITeasyChannel</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=mVKfrWCOB60">JavaScript setTimeOut and setInterval Explained — Theodore Anderson</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>11. JavaScript Engines</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://kipalog.com/posts/Vai-net-ve-V8---Javascript-Engine-dang-sau-Chrome-va-Node-js">Vài nét về V8 - Javascript Engine đằng sau Chrome và Node.js</a></li>
+<li>📜 <a href="https://techtalk.vn/cach-hoat-dong-cua-javascript-v8-engine-va-5-meo-toi-uu-hoa.html">Cách thức hoạt động của JavaScript: V8 engine và 5 mẹo tối ưu hóa</a></li>
+<li>📜 <a href="http://www.softwaremag.com/javascript-engines/">JavaScript Engines — Jen Looper</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964">Understanding How the Chrome V8 Engine Translates JavaScript into Machine Code — DroidHead</a></li>
+<li>📜 <a href="https://medium.com/dailyjs/understanding-v8s-bytecode-317d46c94775">Understanding V8’s Bytecode — Franziska Hinkelmann</a></li>
+<li>📜 <a href="http://thibaultlaurens.github.io/javascript/2013/04/29/how-the-v8-engine-works/">How the V8 engine works? — Thibault Laurens</a></li>
+<li>📜 <a href="https://www.mediacurrent.com/blog/brief-history-googles-v8-javascript-engine/">A Brief History of Google’s V8 Javascript Engine — Clair Smith</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/javascript-essentials-why-you-should-know-how-the-engine-works-c2cc0d321553">JavaScript essentials: why you should know how the engine works - Rainer Hahnekamp</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=uzJ3huwHC0A">Javascript Chuyên Sâu: Javascript Engine là gì? V8 là sao?</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=5nmpokoRaZI">JavaScript Engines: The Good Parts™ — Mathias Bynens &#x26; Benedikt Meurer</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>12. Bitwise Operators, Type Arrays and Array Buffers</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://hackernoon.com/programming-with-js-bitwise-operations-393eb0745dc4">Programming with JS: Bitwise Operations — Alexander Kondov</a></li>
+<li>📜 <a href="https://codeburst.io/using-javascript-bitwise-operators-in-real-life-f551a731ff5">Using JavaScript’s Bitwise Operators in Real Life — ian m</a></li>
+<li>📜 <a href="https://www.w3resource.com/javascript/operators/bitwise-operator.php">JavaScript Bitwise Operators — w3resource</a></li>
+<li>📜 <a href="https://medium.com/bother7-blog/bitwise-operators-in-javascript-65c4c69be0d3">Bitwise Operators in Javascript — Joe Cha</a></li>
+<li>📜 <a href="https://medium.com/techtrument/a-comprehensive-primer-on-binary-computation-and-bitwise-operators-in-javascript-81acf8341f04">A Comprehensive Primer on Binary Computation and Bitwise Operators in Javascript — Paul Brown</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=mesu75PTDC8">JavaScript Bitwise Operators — Programming with Mosh</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>13. DOM and Layout Trees</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://www.digitalocean.com/community/tutorials/introduction-to-the-dom">How To Understand and Modify the DOM in JavaScript — Tania Rascia</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/whats-the-document-object-model-and-why-you-should-know-how-to-use-it-1a2d0bc5429d">What’s the Document Object Model, and why you should know how to use it — Leonardo Maldonado</a></li>
+<li>📜 <a href="https://www.guru99.com/how-to-use-dom-and-events-in-javascript.html">JavaScript DOM Tutorial with Example — Guru99</a></li>
+<li>📜 <a href="https://css-tricks.com/dom/">What is the DOM? — Chris Coyier</a></li>
+<li>📜 <a href="https://zellwk.com/blog/dom-traversals/">Traversing the DOM with JavaScript — Zell Liew</a></li>
+<li>📜 <a href="https://eloquentjavascript.net/14_dom.html">Eloquent JavaScript [Book] — The Document Object Model</a></li>
+<li>📜 <a href="https://javascript.info/dom-nodes">DOM Tree</a></li>
+<li>📜 <a href="https://medium.com/javascript-in-plain-english/how-to-traverse-the-dom-in-javascript-d6555c335b4e">How to traverse the DOM in Javascript — Vojislav Grujić</a></li>
+<li>📜 <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction">Render Tree Construction — Ilya Grigorik</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=FIORjGvT0kk">JavaScript DOM — The Net Ninja</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=0ik6X4DJKCc">JavaScript DOM Crash Course — Traversy Media</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>14. Factories and Classes</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript">How To Use Classes in JavaScript — Tania Rascia</a></li>
+<li>📜 <a href="https://medium.com/tech-tajawal/javascript-classes-under-the-hood-6b26d2667677">Javascript Classes — Under The Hood — Majid</a></li>
+<li>📜 <a href="https://www.javascriptjanuary.com/blog/es6-classes">ES6 Classes — Nathaniel Foster</a></li>
+<li>📜 <a href="https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes">Better JavaScript with ES6, Pt. II: A Deep Dive into Classes ― Peleke Sengstacke</a></li>
+<li>📜 <a href="https://medium.com/front-end-hacking/understand-the-factory-design-pattern-in-plain-javascript-20b348c832bd">Understand the Factory Design Pattern in Plain JavaScript — Aditya Agarwal</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e">JavaScript Factory Functions vs Constructor Functions vs Classes — Eric Elliott</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1">JavaScript Factory Functions with ES6+ — Eric Elliott</a></li>
+<li>📜 <a href="https://atendesigngroup.com/blog/factory-functions-javascript">Factory Functions in JavaScript — Josh Miller</a></li>
+<li>📜 <a href="https://medium.com/@SntsDev/the-factory-pattern-in-js-es6-78f0afad17e9">The Factory Pattern in JS ES6 — SnstsDev</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/class-vs-factory-function-exploring-the-way-forward-73258b6a8d15">Class vs Factory function: exploring the way forward — Cristi Salcescu</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=jpegXpQpb3o">JavaScript Factory Functions — Programming with Mosh</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=ImwrezYhw4w">Factory Functions in JavaScript — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=R7-IwpH80UE">Javascript Tutorial Function Factories — Crypto Chan</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>15. this, call, apply and bind</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp">How-to: call() , apply() and bind() in JavaScript — Niladri Sekhar Dutta</a></li>
+<li>📜 <a href="http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/">JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals — Richard Bovell</a></li>
+<li>📜 <a href="https://tylermcginnis.com/this-keyword-call-apply-bind-javascript/">WTF is this - Understanding the this keyword, call, apply, and bind in JavaScript — Tyler McGinnis</a></li>
+<li>📜 <a href="https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb">Javascript: call(), apply() and bind() — Omer Goldberg</a></li>
+<li>📜 <a href="https://medium.com/@ivansifrim/the-differences-between-call-apply-bind-276724bb825b">The difference between call / apply / bind — Ivan Sifrim</a></li>
+<li>📜 <a href="https://tech.io/playgrounds/9799/learn-solve-call-apply-and-bind-methods-in-javascript">call(), apply() and bind() methods in JavaScript</a></li>
+<li>📜 <a href="https://thenewstack.io/mastering-javascript-callbacks-bind-apply-call/">Mastering ‘this’ in JavaScript: Callbacks and bind(), apply(), call() — Michelle Gienow</a></li>
+<li>📜 <a href="https://dev.to/kbk0125/javascripts-apply-call-and-bind-explained-by-hosting-a-cookout-32jo">JavaScript’s apply, call, and bind explained by hosting a cookout — Kevin Kononenko</a></li>
+<li>📜 <a href="https://www.eigenx.com/blog/https/mediumcom/eigen-x/how-and-when-to-use-bind-call-and-apply-in-javascript-77b6f42898fb">How AND When to use bind, call, and apply in Javascript — Eigen X</a></li>
+<li>📜 <a href="https://www.hacksparrow.com/javascript-bind-vs-apply-and-call.html">JavaScript .bind() vs .apply() and .call() — Hack Sparrow</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call() — MDN</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind">bind() — MDN</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply() — MDN</a></li>
+<li>📜 <a href="http://blog.brew.com.hk/what-is-this-in-javascript/">What is ‘this’ in JavaScript? — Daniel Li</a></li>
+<li>📜 <a href="https://dev.to/ycmjason/let-me-explain-to-you-what-is-this-javascript-44ja">Let me explain to you what is <code class="language-text">this</code>. (Javascript) — Jason Yu</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=c0mLRpw-9rI">JavaScript call, apply and bind — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=AYVYxezrMWA">JavaScript Practical Applications of Call, Apply and Bind functions— techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Uy0NOXLBraE">JavaScript (call, bind, apply) — curious aatma</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=AOSYY1_np_4">Understanding Functions and ‘this’ In The World of ES2017 — Bryan Hughes</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=GhbhD1HR5vk">bind and this - Object Creation in JavaScript - FunFunFunction</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=AYVYxezrMWA">JavaScript Practical Applications of Call, Apply and Bind functions — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=uBdH0iB1VDM">JS Function Methods call(), apply(), and bind() — Steve Griffith</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>16. new, Constructor, instanceof and Instances</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://codeburst.io/javascript-for-beginners-the-new-operator-cee35beb669e">JavaScript For Beginners: the ‘new’ operator — Brandon Morelli</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/demystifying-javascripts-new-keyword-874df126184c">Let’s demystify JavaScript’s ‘new’ keyword — Cynthia Lee</a></li>
+<li>📜 <a href="https://javascript.info/constructor-new">Constructor, operator “new” — JavaScript.Info</a></li>
+<li>📜 <a href="https://css-tricks.com/understanding-javascript-constructors/">Understanding JavaScript Constructors — Faraz Kelhini</a></li>
+<li>📜 <a href="https://openclassrooms.com/en/courses/3523231-learn-to-code-with-javascript/4379006-use-constructor-functions">Use Constructor Functions — Openclassrooms</a></li>
+<li>📜 <a href="http://2ality.com/2017/08/type-right.html">Beyond <code class="language-text">typeof</code> and <code class="language-text">instanceof</code>: simplifying dynamic type checks — Dr. Axel Rauschmayer</a></li>
+<li>📜 <a href="https://appendto.com/2016/10/what-is-the-instanceof-operator-in-javascript/">What Is the Instanceof Operator in JavaScript — appendTo</a></li>
+<li>📜 <a href="http://garyrafferty.com/2012/12/07/JavaScript-instanceof-vs-typeof.html">JavaScript instanceof vs typeof — Gary Rafferty</a></li>
+<li>📜 <a href="https://javascriptrefined.io/function-and-object-instances-of-each-other-1e1095d5faac">Function and Object, instances of each other — Kiro Risk</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>17. Prototype Inheritance and Prototype Chain</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/@parsyval/javascript-prototype-vs-class-a7015d5473b">Javascript : Prototype vs Class — Valentin PARSY</a></li>
+<li>📜 <a href="https://mathiasbynens.be/notes/prototypes">JavaScript engine fundamentals: optimizing prototypes — Mathias Bynens</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-prototype-cb29d82b8809">JavaScript Prototype — NC Patro</a></li>
+<li>📜 <a href="https://www.codementor.io/sandeepranjan2007/prototype-in-javascipt-knbve0lqo">Prototype in Javascript — Sandeep Ranjan</a></li>
+<li>📜 <a href="https://hackernoon.com/prototypes-in-javascript-5bba2990e04b">Prototypes in JavaScript — Rupesh Mishra</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/prototype-in-js-busted-5547ec68872">Prototype in JavaScript: it’s quirky, but here’s how it works — Pranav Jindal</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain — MDN</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9">Master the JavaScript Interview: What’s the Difference Between Class &#x26; Prototypal Inheritance? — Eric Elliott</a></li>
+<li>📜 <a href="https://hackernoon.com/understanding-javascript-prototype-and-inheritance-d55a9a23bde2">Understanding JavaScript: Prototype and Inheritance — Alexander Kondov</a></li>
+<li>📜 <a href="https://javascript.info/prototype-inheritance">Prototypal Inheritance — JavaScript.Info</a></li>
+<li>📜 <a href="https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript">How To Work with Prototypes and Inheritance in JavaScript — Tania Rascia</a></li>
+<li>📜 <a href="https://codeburst.io/master-javascript-prototypes-inheritance-d0a9a5a75c4e">Master JavaScript Prototypes &#x26; Inheritance — Arnav Aggarwal</a></li>
+<li>📜 <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch5.md">You Don’t Know JS [Book] Chapter 5: Prototypes — Kyle Simpson</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/understanding-prototypal-inheritance-in-javascript-with-css-93b2fcda75e4">JavaScript’s Prototypal Inheritance Explained Using CSS — Nash Vail</a></li>
+<li>📜 <a href="https://gist.github.com/derhuerst/a585c4916b1c361cc6f0">Prototypal Inheritance in JavaScript — Jannis Redmann</a></li>
+<li>📜 <a href="http://www.competa.com/blog/classical-prototypical-inheritance-javascript/">Classical and Prototypical Inheritance in JavaScript — Danny Cornelisse</a></li>
+<li>📜 <a href="https://scotch.io/tutorials/demystifying-es6-classes-and-prototypal-inheritance">Demystifying ES6 Classes And Prototypal Inheritance ― Neo Ighodaro</a></li>
+<li>📜 <a href="https://dev.to/danny/intro-to-prototypal-inheritance---js-9di">Intro To Prototypal Inheritance — Dharani Jayakanthan</a></li>
+<li>📜 <a href="http://blog.brew.com.hk/classes-in-javascript-explained/">Classes in JavaScript - Explained — Daniel Li</a></li>
+<li>📜 <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md">You Don’t Know JS: this &#x26; Object Prototypes — Kyle Simpson</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=sOrtAjyk4lQ">Javascript Prototype Inheritance — Avelx</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=7oNWNlMrkpc">JavaScript Prototype Inheritance Explained pt. I — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=uIlj6_z_wL8">JavaScript Prototype Inheritance Explained pt. II — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=qMO-LTOrJaE">JavaScript Prototype Inheritance Explained — Kyle Robinson</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=G6l5CHl67HQ">Advanced Javascript - Prototypal Inheritance In 1 Minute</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=phwzuiJJPpQ">An Overview Of Classical Javascript Classes and Prototypal Inheritance — Pentacode</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=4jb4AYEyhRc">Object Oriented JavaScript - Prototype — The Net Ninja</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=2rkEbcptR64">Prototype in JavaScript — kudvenkat</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=oCwCcNvaXAQ">JavaScript Using Prototypes — O’Reilly</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=XskMWBXNbp0">A Beginner’s Guide to Javascript’s Prototype — Tyler Mcginnis</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=hS_WqkyUah8">Prototypes in Javascript - p5.js Tutorial — The Coding Train</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>18. Object.create and Object.assign</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create() — MDN</a></li>
+<li>📜 <a href="https://hackernoon.com/object-create-in-javascript-fa8674df6ed2">Object.create in JavaScript — Rupesh Mishra</a></li>
+<li>📜 <a href="https://www.htmlgoodies.com/beyond/javascript/object.create-the-new-way-to-create-objects-in-javascript.html">Object.create(): the New Way to Create Objects in JavaScript — Rob Gravelle</a></li>
+<li>📜 <a href="http://adripofjavascript.com/blog/drips/basic-inheritance-with-object-create.html">Basic Inheritance with Object.create — Joshua Clanton</a></li>
+<li>📜 <a href="https://www.geeksforgeeks.org/object-create-javascript/">Object.create() In JavaScript — GeeksforGeeks</a></li>
+<li>📜 <a href="https://medium.com/@jonathanvox01/understanding-the-difference-between-object-create-and-the-new-operator-b2a2f4749358">Understanding the difference between Object.create() and the new operator — Jonathan Voxland</a></li>
+<li>📜 <a href="https://www.sitepoint.com/javascript-object-creation-patterns-best-practises/">JavaScript Object Creation: Patterns and Best Practices — Jeff Mott</a></li>
+<li>📜 <a href="https://alligator.io/js/dealing-with-objects/">Dealing With Objects in JavaScript With Object.assign, Object.keys and hasOwnProperty</a></li>
+<li>📜 <a href="https://scotch.io/bar-talk/copying-objects-in-javascript">Copying Objects in JavaScript ― Orinami Olatunji</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign() — MDN</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-object-assign-bc9696dcbb6e">JavaScript: Object.assign() — Thiago S. Adriano</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=aw7NfYhR5rc">Object.assign() explained — Aaron Writes Code</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=9Ky4X6inpi4">Object.assign() Method — techsith</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>19. map, reduce, filter</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/jsguru/javascript-functional-programming-map-filter-and-reduce-846ff9ba492d">JavaScript Functional Programming — map, filter and reduce — Bojan Gvozderac</a></li>
+<li>📜 <a href="https://medium.com/@joomiguelcunha/learn-map-filter-and-reduce-in-javascript-ea59009593c4">Learn map, filter and reduce in Javascript — João Miguel Cunha</a></li>
+<li>📜 <a href="https://danmartensen.svbtle.com/javascripts-map-reduce-and-filter">JavaScript’s Map, Reduce, and Filter — Dan Martensen</a></li>
+<li>📜 <a href="https://code.tutsplus.com/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209">How to Use Map, Filter, &#x26; Reduce in JavaScript — Peleke Sengstacke</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-learn-to-chain-map-filter-and-reduce-acd2d0562cd4">JavaScript — Learn to Chain Map, Filter, and Reduce — Brandon Morelli</a></li>
+<li>📜 <a href="https://codeburst.io/write-beautiful-javascript-with-%CE%BB-fp-es6-350cd64ab5bf">Javascript data structure with map, reduce, filter and ES6 — Deepak Gupta</a></li>
+<li>📜 <a href="https://hackernoon.com/understanding-map-filter-and-reduce-in-javascript-5df1c7eee464">Understanding map, filter and reduce in Javascript — Luuk Gruijs</a></li>
+<li>📜 <a href="https://hackernoon.com/functional-programming-in-js-map-filter-reduce-pt-5-308a205fdd5f">Functional Programming in JS: map, filter, reduce (Pt. 5) — Omer Goldberg</a></li>
+<li>📜 <a href="https://wsvincent.com/functional-javascript-map-filter-reduce/">JavaScript: Map, Filter, Reduce — William S. Vincent</a></li>
+<li>📜 <a href="https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/">Arrow Functions: Fat and Concise Syntax in JavaScript — Kyle Pennell</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc">JavaScript: Arrow Functions for Beginners — Brandon Morelli</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26">When (and why) you should use ES6 arrow functions — and when you shouldn’t — Cynthia Lee</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-learn-understand-arrow-functions-fe2083533946">JavaScript — Learn &#x26; Understand Arrow Functions — Brandon Morelli</a></li>
+<li>📜 <a href="https://medium.com/podiihq/javascript-arrow-functions-27d4c3334b83">(JavaScript )=> Arrow functions — sigu</a></li>
+<li>📜 <a href="https://www.linkedin.com/pulse/possibility-use-asyncawait-filter-find-foreach-map-reduce-geeganage/">A possibility to use Async/Await for filter(), find(), forEach(), map() and reduce() methods in Array - Ruwan Geeganage</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=UXiYii0Y7Nw">Map, Filter and Reduce — Lydia Hallie</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=vytzLlY_wmU">Functional JavaScript: Map, forEach, Reduce, Filter — Theodore Anderson</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=qTeeVd8hOFY">JavaScript Array superpowers: Map, Filter, Reduce (part I) — Michael Rosata</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=gIm9xLYudL0">JavaScript Array superpowers: Map, Filter, Reduce (part 2) — Michael Rosata</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=zYBeEPxNSbw">JavaScript Higher Order Functions - Filter, Map, Sort &#x26; Reduce — Epicop</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=4qWlqD0yYTU">[Array Methods 2/3] .filter + .map + .reduce — CodeWithNick</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=6sQDTgOqh-I">Arrow functions in JavaScript - What, Why and How — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=e-5obm1G_FY&#x26;t=1521s">Learning Functional Programming with JavaScript — Anjana Vakil - JSUnconf</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>20. Pure Functions, Side Effects and State Mutation</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://hackernoon.com/javascript-and-functional-programming-pt-3-pure-functions-d572bb52e21c">Javascript and Functional Programming — Pure Functions — Omer Goldberg</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976">Master the JavaScript Interview: What is a Pure Function? — Eric Elliott</a></li>
+<li>📜 <a href="https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c">JavaScript: What Are Pure Functions And Why Use Them? — James Jeffery</a></li>
+<li>📜 <a href="http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/">Pure functions in JavaScript — @nicoespeon</a></li>
+<li>📜 <a href="https://www.sitepoint.com/functional-programming-pure-functions/">Functional Programming: Pure Functions — Arne Brasseur</a></li>
+<li>📜 <a href="https://appdividend.com/2017/04/10/pure-functions-in-javascript/">Pure Functions In Javascript — Krunal</a></li>
+<li>📜 <a href="https://alistapart.com/article/making-your-javascript-pure">Making your JavaScript Pure — Jack Franklin</a></li>
+<li>📜 <a href="https://slemgrim.com/mutate-or-not-to-mutate/">To mutate, or not to mutate, in JavaScript</a></li>
+<li>📜 <a href="https://medium.com/@fknussel/arrays-objects-and-mutations-6b23348b54aa">Arrays, Objects and Mutations — Federico Knüssel</a></li>
+<li>📜 <a href="https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310">The State of Immutability — Maciej Sikora</a></li>
+<li>📜 <a href="https://jrsinclair.com/articles/2018/how-to-deal-with-dirty-side-effects-in-your-pure-functional-javascript/">How to deal with dirty side effects in your pure functional JavaScript — James Sinclair</a></li>
+<li>📜 <a href="https://davidwalsh.name/preventing-sideeffects-javascript">Preventing Side Effects in JavaScript — David Walsh</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=dZ41D6LDSBg">Pure Functions — Hexlet</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Jh_Uzqzz_wM">Pure Functions - Functional Programming in JavaScript — Paul McBride</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=frT3H-eBmPc">JavaScript Pure Functions — Seth Alexander</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>21. Closures</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Closures — MDN</a></li>
+<li>📜 <a href="https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8">I never understood JavaScript closures — Olivier De Meulder</a></li>
+<li>📜 <a href="https://javascript.info/closure">Closure — JavaScript.Info</a></li>
+<li>📜 <a href="http://javascriptissexy.com/understand-javascript-closures-with-ease/">Understand JavaScript Closures With Ease — Richard Bovell</a></li>
+<li>📜 <a href="https://codeburst.io/understanding-javascript-closures-da6aab330302">Understanding JavaScript Closures — Codesmith</a></li>
+<li>📜 <a href="https://codeburst.io/understand-closures-in-javascript-d07852fa51e7">Understand Closures in JavaScript — Brandon Morelli</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/javascript-closures-simplified-d0d23fa06ba4">A simple guide to help you understand closures in JavaScript — Prashant Ram</a></li>
+<li>📜 <a href="https://scotch.io/tutorials/understanding-javascript-closures-a-practical-approach">Understanding JavaScript Closures: A Practical Approach — Paul Upendo</a></li>
+<li>📜 <a href="https://hackernoon.com/understanding-javascript-closures-4188edf5ea1b">Understanding JavaScript: Closures — Alexander Kondov</a></li>
+<li>📜 <a href="https://hackernoon.com/how-to-use-javascript-closures-with-confidence-85cd1f841a6b">How to use JavaScript closures with confidence — Léna Faure</a></li>
+<li>📜 <a href="https://howchoo.com/g/mge2mji2mtq/javascript-closures-by-example">JavaScript closures by example — tyler</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=71AtaJpJHw0">Javascript Closure — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=CQqwU2Ixu-U">Closures — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=-xqJo5VRP4A">Closures in JavaScript — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=yiEeiMN2Khs">JavaScript Closures 101: What is a closure? — JavaScript Tutorials</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=1JsJx1x35c0">Closures — freeCodeCamp</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=-rLrGAXK8WE">JavaScript Closures — CodeWorkr</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>22. High Order Functions</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://chungnguyen.xyz/posts/higher-order-functions-la-gi-va-duoc-su-dung-nhu-the-nao">Higher Order Functions là gì và được sử dụng như thế nào?</a></li>
+<li>📜 <a href="https://eloquentjavascript.net/05_higher_order.html">Higher-Order Functions — Eloquent JavaScript [Book]</a></li>
+<li>📜 <a href="https://www.sitepoint.com/higher-order-functions-javascript/">Higher-Order Functions in JavaScript — M. David Green</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/higher-order-functions-in-javascript-d9101f9cf528">Higher Order Functions: Using Filter, Map and Reduce for More Maintainable Code — Guido Schmitz</a></li>
+<li>📜 <a href="https://hackernoon.com/effective-functional-javascript-first-class-and-higher-order-functions-713fde8df50a">First-class and Higher Order Functions: Effective Functional JavaScript — Hugo Di Francesco</a></li>
+<li>📜 <a href="https://www.lullabot.com/articles/higher-order-functions-in-javascript">Higher Order Functions in JavaScript — John Hannah</a></li>
+<li>📜 <a href="http://javascriptissexy.com/tag/higher-order-functions/">Higher-order Functions — Richard Bovell</a></li>
+<li>📜 <a href="http://www.zsoltnagy.eu/higher-order-functions-in-javascript/">Higher Order Functions in JavaScript — Zsolt Nagy</a></li>
+<li>📜 <a href="https://derickbailey.com/2015/10/21/fun-with-higher-order-functions-in-javascript/">Fun With Higher Order Functions In JavaScript — Derick</a></li>
+<li>📜 <a href="https://github.com/pedroapfilho/high-order-functions">Just a reminder on how to use high order functions — Pedro Filho</a></li>
+<li>📜 <a href="https://hackernoon.com/how-to-use-javascript-closures-with-confidence-85cd1f841a6b">How to use JavaScript closures with confidence — Léna Faure</a></li>
+<li>📜 <a href="https://howchoo.com/g/mge2mji2mtq/javascript-closures-by-example">JavaScript closures by example — tyler</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=rRgD1yVwIvE">JavaScript Higher Order Functions &#x26; Arrays — Traversy Media</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=BMUiFMZr7vk">Higher Order Functions — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=dTlpYnmBW9I">Higher Order Functions in Javascript — Raja Yogan</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=GYRMNp1SKXA">Higher Order Iterators in JavaScript — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=H4awPsyugS0">Higher Order Functions in JavaScript — The Coding Train</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>23. Recursion</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.freecodecamp.org/recursion-in-javascript-1608032c7a1f">Recursion in JavaScript — Kevin Ennis</a></li>
+<li>📜 <a href="https://medium.com/@zfrisch/understanding-recursion-in-javascript-992e96449e03">Understanding Recursion in JavaScript — Zak Frisch</a></li>
+<li>📜 <a href="https://codeburst.io/learn-and-understand-recursion-in-javascript-b588218e87ea">Learn and Understand Recursion in JavaScript — Brandon Morelli</a></li>
+<li>📜 <a href="https://www.sitepoint.com/recursion-functional-javascript/">Recursion in Functional JavaScript — M. David Green</a></li>
+<li>📜 <a href="https://hackernoon.com/programming-with-js-recursion-31371e2bf808">Programming with JS: Recursion — Alexander Kondov</a></li>
+<li>📜 <a href="https://dev.to/simov/anonymous-recursion-in-javascript">Anonymous Recursion in JavaScript — simo</a></li>
+<li>📜 <a href="http://www.jstips.co/en/javascript/recursion-iteration-and-tail-calls-in-js/">Recursion, iteration and tail calls in JS — loverajoel</a></li>
+<li>📜 <a href="https://www.thecodingdelight.com/understanding-recursion-javascript/">Understanding Recursion in JavaScript with Confidence — Jay</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=VtG0WAUvq2w">Recursion In JavaScript — techsith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=k7-N8R0-KY4">Recursion — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=vLhHyGTkjCs">Recursion and Recursive Functions — Hexlet</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=kGXVsd8pBLw">Recursion: Recursion() — JS Monthly — Lucas da Costa</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=uyjsR9eNTIw">Recursive Function in JavaScript — kudvenkat</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Mv9NEXX1VHc">What on Earth is Recursion? — Computerphile</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=9NO5dXSlbv8">Javascript Tutorial 34: Introduction To Recursion — codedamn</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>24. Collections and Generators</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-collections/">ES6 In Depth: Collections — Jason Orendorff</a></li>
+<li>📜 <a href="https://www.sitepoint.com/es6-collections-map-set-weakmap-weakset/">ES6 Collections: Using Map, Set, WeakMap, WeakSet — Kyle Pennell</a></li>
+<li>📜 <a href="https://ponyfoo.com/articles/es6-weakmaps-sets-and-weaksets-in-depth">ES6 WeakMaps, Sets, and WeakSets in Depth — Nicolás Bevacqua</a></li>
+<li>📜 <a href="https://alligator.io/js/sets-introduction/">Introduction to Sets in JavaScript — Alligator.io</a></li>
+<li>📜 <a href="https://alligator.io/js/maps-introduction/">Introduction to Maps in JavaScript — Alligator.io</a></li>
+<li>📜 <a href="https://javascript.info/map-set-weakmap-weakset">Map, Set, WeakMap and WeakSet — JavaScript.Info</a></li>
+<li>📜 <a href="https://dev.to/mildrenben/maps-in-es6---a-quick-guide-35pk">Maps in ES6 - A Quick Guide — Ben Mildren</a></li>
+<li>📜 <a href="https://medium.com/front-end-hacking/es6-set-vs-array-what-and-when-efc055655e1a">ES6 — Set vs Array — What and when? — Maya Shavin</a></li>
+<li>📜 <a href="https://medium.com/front-end-hacking/es6-map-vs-object-what-and-when-b80621932373">ES6 — Map vs Object — What and when? — Maya Shavin</a></li>
+<li>📜 <a href="http://www.deadcoderising.com/es6-working-with-sets-in-javascript/">ES6: Working with Sets in JavaScript — Dead Code Rising</a></li>
+<li>📜 <a href="https://codeburst.io/array-vs-set-vs-map-vs-object-real-time-use-cases-in-javascript-es6-47ee3295329b">Array vs Set vs Map vs Object — Real-time use cases in Javascript (ES6/ES7) — Rajesh Babu</a></li>
+<li>📜 <a href="https://dev.to/claireparker/how-to-create-an-array-of-unique-values-in-javascript-using-sets-5dg6">How to create an array of unique values in JavaScript using Sets — Claire Parker-Jones</a></li>
+<li>📜 <a href="https://hackernoon.com/what-you-should-know-about-es6-maps-dc66af6b9a1e">What You Should Know About ES6 Maps — Just Chris</a></li>
+<li>📜 <a href="https://ponyfoo.com/articles/es6-maps-in-depth">ES6 Maps in Depth — Nicolás Bevacqua</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator">Generator — MDN web docs</a></li>
+<li>📜 <a href="https://codeburst.io/what-are-javascript-generators-and-how-to-use-them-c6f2713fd12e">What are JavaScript Generators and how to use them — Vladislav Stepanov</a></li>
+<li>📜 <a href="https://codeburst.io/understanding-generators-in-es6-javascript-with-examples-6728834016d5">Understanding JavaScript Generators With Examples — Arfat Salman</a></li>
+<li>📜 <a href="https://davidwalsh.name/es6-generators">The Basics of ES6 Generators — Kyle Simpson</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=ycohYSx5h9w">JavaScript ES6 / ES2015 Set, Map, WeakSet and WeakMap — Traversy Media</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=m4abICrldQI">The Differences between ES6 Maps and Sets — Steve Griffith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=QO07THdLWQo">Javascript Generators - THEY CHANGE EVERYTHING - ES6 Generators Harmony Generators — LearnCode.academy</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>25. Promises</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise — MDN</a></li>
+<li>📜 <a href="https://scotch.io/tutorials/javascript-promises-for-dummies">JavaScript Promises for Dummies ― Jecelyn Yeen</a></li>
+<li>📜 <a href="https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1">Understanding promises in JavaScript — Gokul N K</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261">Master the JavaScript Interview: What is a Promise? — Eric Elliott</a></li>
+<li>📜 <a href="https://www.sitepoint.com/overview-javascript-promises/">An Overview of JavaScript Promises — Sandeep Panda</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/promises-in-javascript-explained-277b98850de">How to use Promises in JavaScript — Prashant Ram</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/how-to-implement-promises-in-javascript-1ce2680a7f51">Implementing Promises In JavaScript — Maciej Cieslar</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138">JavaScript: Promises explained with simple real life analogies — Shruti Kapoor</a></li>
+<li>📜 <a href="http://exploringjs.com/es6/ch_promises.html">Promises for Asynchronous Programming — Exploring JS</a></li>
+<li>📜 <a href="https://blog.codeanalogies.com/2018/08/26/javascript-promises-explained-by-gambling-at-a-casino/">JavaScript Promises Explained By Gambling At A Casino — Kevin Kononenko</a></li>
+<li>📜 <a href="https://medium.com/datafire-io/es6-promises-patterns-and-anti-patterns-bbb21a5d0918">ES6 Promises: Patterns and Anti-Patterns — Bobby Brennan</a></li>
+<li>📜 <a href="https://codeburst.io/a-simple-guide-to-es6-promises-d71bacd2e13a">A Simple Guide to ES6 Promises — Brandon Morelli</a></li>
+<li>📜 <a href="https://codeburst.io/the-es6-promises-87a979ab27e4">The ES6 Promises — Manoj Singh Negi</a></li>
+<li>📜 <a href="https://ponyfoo.com/articles/es6-promises-in-depth">ES6 Promises in Depth — Nicolás Bevacqua</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=vQ3MoXnKfuQ">Let’s Learn ES6 - Promises — Ryan Christiani</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=XJEHuBZQ5dU">JavaScript ES6 / ES2015 Promises — Traversy Media</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=2d7s3spWAzo">Promises — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=f8IgdnYIwOU">Error Handling Promises in JavaScript — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=QO4NXhWo_NM">Promises Part 1 - Topics of JavaScript/ES6 — The Coding Train</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>26. async/await</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://javascript.info/async-await">async/await — JavaScript.Info</a></li>
+<li>📜 <a href="https://hackernoon.com/understanding-async-await-in-javascript-1d81bb079b2c">Understanding async/await in Javascript — Gokul N K</a></li>
+<li>📜 <a href="https://eloquentjavascript.net/11_async.html">Asynchronous Programming — Eloquent JavaScript</a></li>
+<li>📜 <a href="https://alligator.io/js/async-functions/">Exploring Async/Await Functions in JavaScript — Alligator.io</a></li>
+<li>📜 <a href="https://scotch.io/tutorials/asynchronous-javascript-using-async-await">Asynchronous Javascript using async/await — Joy Warugu</a></li>
+<li>📜 <a href="https://flaviocopes.com/javascript-async-await/">Modern Asynchronous JavaScript with async/await — Flavio Copes</a></li>
+<li>📜 <a href="https://www.toptal.com/javascript/asynchronous-javascript-async-await-tutorial">Asynchronous JavaScript: From Callback Hell to Async and Await — Demir Selmanovic</a></li>
+<li>📜 <a href="https://medium.com/@_bengarrison/javascript-es8-introducing-async-await-functions-7a471ec7de8a">Javascript — ES8 Introducing async/await Functions — Ben Garrison</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/avoiding-the-async-await-hell-c77a0fb71c4c">How to escape async/await hell — Aditya Agarwal</a></li>
+<li>📜 <a href="https://ponyfoo.com/articles/understanding-javascript-async-await">Understanding JavaScript’s async await — Nicolás Bevacqua</a></li>
+<li>📜 <a href="https://techbrij.com/javascript-async-await-parallel-sequence">JavaScript Async/Await: Serial, Parallel and Complex Flow — TechBrij</a></li>
+<li>📜 <a href="http://exploringjs.com/es6/ch_async.html">Asynchronous Programming — Exploring JS</a></li>
+<li>📜 <a href="https://blog.pusher.com/promises-async-await/">From JavaScript Promises to Async/Await: why bother? — Chris Nwamba</a></li>
+<li>📜 <a href="https://www.sitepoint.com/flow-control-callbacks-promises-async-await/">Flow Control in Modern JS: Callbacks to Promises to Async/Await — Craig Buckler</a></li>
+<li>📜 <a href="https://dzone.com/articles/javascript-promises-and-why-asyncawait-wins-the-ba">JavaScript: Promises and Why Async/Await Wins the Battle — Nick Parsons</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=9YkUCxvaLEk">Async + Await — Wes Bos</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=SrNQS8J67zc">Asynchrony: Under the Hood — Shelley Vohr</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=568g8hxJJp4&#x26;index=3&#x26;list=PL0zVEGEvSaeHJppaRLrqjeTPnCH6">async/await in JavaScript - What, Why and How — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=XO77Fib9tSI&#x26;index=3&#x26;list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx">async/await Part 1 - Topics of JavaScript/ES8 — The Coding Train</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=chavThlNz3s&#x26;index=4&#x26;list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx">async/await Part 2 - Topics of JavaScript/ES8 — The Coding Train</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>27. Data Structures</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c">Data Structures in JavaScript — Thon Ly</a></li>
+<li>📜 <a href="https://itnext.io/algorithms-and-data-structures-in-javascript-a71548f902cb">Algorithms and Data Structures in JavaScript — Oleksii Trekhleb</a></li>
+<li>📜 <a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/data-structures-objects-and-arrays">Data Structures: Objects and Arrays ― Chris Nwamba</a></li>
+<li>📜 <a href="http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/">Data structures in JavaScript — Benoit Vallon</a></li>
+<li>📜 <a href="https://blog.cloudboost.io/playing-with-data-structures-in-javascript-stack-a55ebe50f29d">Playing with Data Structures in Javascript — Anish K.</a></li>
+<li>📜 <a href="https://hackernoon.com/the-little-guide-of-queue-in-javascript-4f67e79260d9">The Little Guide of Queue in JavaScript — Germán Cutraro</a></li>
+<li>📜 <a href="https://github.com/barretlee/algorithms">All algorithms writing with JavaScript in the book ‘Algorithms Fourth Edition’</a></li>
+<li>📜 <a href="https://github.com/nzakas/computer-science-in-javascript">Collection of classic computer science paradigms in JavaScript</a></li>
+<li>📜 <a href="https://github.com/jamiebuilds/itsy-bitsy-data-structures">All the things you didn’t know you wanted to know about data structures</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=PylQlISSH8U&#x26;list=PLujX4CIdBGCa-65N3uN8CDbUMrYsHBrz-">Algorithms in JavaScript — Seth Koch</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=H_EBPZgiAas&#x26;list=PLDmvslp_VR0zYUSth_8O69p4_cmvZEgLa">Algorithms In Javascript | Ace Your Interview — Eduonix Learning Solutions</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Gj5qBheGOEo&#x26;list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ">Data Structures and Algorithms in JavaScript — freeCodeCamp</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Ymh_AurrMbA">Learning JavaScript Data Structures and Algorithms: Sorting — Packt Video</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>28. Expensive Operation and Big O Notation</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://medium.com/cesars-tech-insights/big-o-notation-javascript-25c79f50b19b">Big O Notation in Javascript — César Antón Dorantes</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/time-complexity-big-o-notation-1a4310c3ee4b">Time Complexity/Big O Notation — Tim Roberts</a></li>
+<li>📜 <a href="https://medium.com/@gmedina229/big-o-in-javascript-36ff67766051">Big O in JavaScript — Gabriela Medina</a></li>
+<li>📜 <a href="http://www.bradoncode.com/blog/2012/04/big-o-algorithm-examples-in-javascript.html">Big O Search Algorithms in JavaScript — Bradley Braithwaite</a></li>
+<li>📜 <a href="https://www.jenniferbland.com/time-complexity-analysis-in-javascript/">Time Complexity Analysis in JavaScript — Jennifer Bland</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/time-is-complex-but-priceless-f0abd015063c">Algorithms in plain English: time complexity and Big-O Notation — Michael Olorunnisola</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=HgA5VOFan5E">JavaScript: Intro to Big O Notation and Function Runtime — Eric Traub</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=KatlvCFHPRo">Essential Big O for JavaScript Developers — Dave Smith</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=ALl86xJiTD8">Big O Notation - Time Complexity Analysis — WebTunings</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>29. Algorithms</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://github.com/Crizstian/data-structure-and-algorithms-with-ES6">Data Structures and Algorithms using ES6</a></li>
+<li>📜 <a href="https://github.com/trekhleb/javascript-algorithms">Algorithms and data structures implemented in JavaScript with explanations and links to further readings</a></li>
+<li>📜 <a href="http://www.thatjsdude.com/interview/js1.html">JS: Interview Algorithm</a></li>
+<li>📜 <a href="https://medium.com/siliconwat/algorithms-in-javascript-b0bed68f4038">Algorithms in JavaScript — Thon Ly</a></li>
+<li>📜 <a href="https://medium.freecodecamp.org/javascript-objects-square-brackets-and-algorithms-e9a2916dc158">JavaScript Objects, Square Brackets and Algorithms — Dmitri Grabov</a></li>
+<li>📜 <a href="https://github.com/felipernb/algorithms.js">Atwood’s Law applied to CS101 - Classic algorithms and data structures implemented in JavaScript</a></li>
+<li>📜 <a href="https://github.com/yangshun/lago">Data Structures and Algorithms library in JavaScript</a></li>
+<li>📜 <a href="https://github.com/idosela/algorithms-in-javascript">Collection of computer science algorithms and data structures written in JavaScript</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>30. Inheritance, Polymorphism and Code Reuse</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://javascript.info/class-inheritance">Class inheritance, super — JavaScript.Info</a></li>
+<li>📜 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript — MDN</a></li>
+<li>📜 <a href="https://hackernoon.com/inheritance-in-javascript-21d2b82ffa6f">Inheritance in JavaScript — Rupesh Mishra</a></li>
+<li>📜 <a href="https://www.sitepoint.com/simple-inheritance-javascript/">Simple Inheritance with JavaScript — David Catuhe</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-inheritance-25fe61ab9f85">JavaScript — Inheritance, delegation patterns and Object linking — NC Patro</a></li>
+<li>📜 <a href="https://blog.knoldus.com/object-oriented-javascript-polymorphism-with-examples/">Object Oriented JavaScript: Polymorphism with examples — Knoldus Blogs</a></li>
+<li>📜 <a href="https://medium.com/yld-engineering-blog/program-like-proteus-a-beginners-guide-to-polymorphism-in-javascript-867bea7c8be2">Program Like Proteus — A beginner’s guide to polymorphism in Javascript — Sam Galson</a></li>
+<li>📜 <a href="https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/">Object-oriented JavaScript: A Deep Dive into ES6 Classes — Jeff Mott</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=yXlFR81tDBM">Inheritance in JavaScript — kudvenkat</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=RBLIm5LMrmc">JavaScript ES6 Classes and Inheritance — Traversy Media</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=zdovG9cuEBA">Polymorphism in JavaScript — kudvenkat</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>31. Design Patterns</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know">4 JavaScript Design Patterns You Should Know — Devan Patel</a></li>
+<li>📜 <a href="https://medium.com/beginners-guide-to-mobile-web-development/javascript-design-patterns-25f0faaaa15">JavaScript Design Patterns – Beginner’s Guide to Mobile Web Development — Soumyajit Pathak</a></li>
+<li>📜 <a href="https://medium.com/front-end-hacking/javascript-design-patterns-ed9d4c144c81">JavaScript Design Patterns — Akash Pal</a></li>
+<li>📜 <a href="https://seesparkbox.com/foundry/javascript_design_patterns">Javascript Design Patterns: What They Are &#x26; How To Use Them — Patrick Simpson</a></li>
+<li>📜 <a href="https://blog.bitsrc.io/understanding-design-patterns-in-javascript-13345223f2dd">JavaScript Design Patterns: Understanding Design Patterns in JavaScript - Sukhjinder Arora</a></li>
+<li>📜 <a href="https://github.com/fbeline/Design-Patterns-JS">All the 23 (GoF) design patterns implemented in Javascript — Felipe Beline</a></li>
+<li>📜 <a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning JavaScript Design Patterns — Addy Osmani </a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.udacity.com/course/javascript-design-patterns--ud989">JavaScript Design Patterns — Udacity</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=hO7mzO83N1Q">JavaScript Patterns for 2017 — Scott Allen</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>32. Partial Applications, Currying, Compose and Pipe</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://www.codementor.io/michelre/use-function-composition-in-javascript-gkmxos5mj">Use function composition in JavaScript — Rémi</a></li>
+<li>📜 <a href="https://blog.benestudio.co/currying-in-javascript-es6-540d2ad09400">Currying in JavaScript ES6 — Adam Bene</a></li>
+<li>📜 <a href="https://medium.com/@pragyan88/writing-middleware-composition-and-currying-elegance-in-javascript-8b15c98a541b">Composition and Currying Elegance in JavaScript — Pragyan Das</a></li>
+<li>📜 <a href="https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10">Functional JavaScript: Function Composition For Every Day Use — Joel Thoms</a></li>
+<li>📜 <a href="https://medium.com/@acparas/what-i-learned-today-july-2-2017-ab9a46dbf85f">Functional Composition: compose() and pipe() — Anton Paras</a></li>
+<li>📜 <a href="http://busypeoples.github.io/post/functional-composing-javascript/">Why The Hipsters Compose Everything: Functional Composing In JavaScript — A. Sharif</a></li>
+<li>📜 <a href="https://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-functions/">A Gentle Introduction to Functional JavaScript pt III: Functions for making functions — James Sinclair</a></li>
+<li>📜 <a href="https://jsleao.wordpress.com/2015/02/22/curry-and-compose-why-you-should-be-using-something-like-ramda-in-your-code/">Curry And Compose (why you should be using something like ramda in your code) — jsanchesleao</a></li>
+<li>📜 <a href="https://vanslaars.io/post/create-pipe-function/">Function Composition in JavaScript with Pipe — Andy Van Slaars</a></li>
+<li>📜 <a href="https://developer.telerik.com/featured/practical-functional-javascript-ramda/">Practical Functional JavaScript with Ramda — Andrew D’Amelio, Yuri Takhteyev</a></li>
+<li>📜 <a href="https://hackernoon.com/the-beauty-in-partial-application-currying-and-function-composition-d885bdf0d574">The beauty in Partial Application, Currying, and Function Composition — Joel Thoms</a></li>
+<li>📜 <a href="https://medium.com/javascript-scene/curry-or-partial-application-8150044c78b8">Curry or Partial Application? — Eric Elliott</a></li>
+<li>📜 <a href="http://benalman.com/news/2012/09/partial-application-in-javascript/">Partial Application in JavaScript — Ben Alman</a></li>
+<li>📜 <a href="https://hackernoon.com/partial-application-of-functions-dbe7d9b80760">Partial Application of Functions — Functional Reactive Ninja</a></li>
+<li>📜 <a href="https://codeburst.io/javascript-currying-vs-partial-application-4db5b2442be8">Currying vs Partial Application — Deepak Gupta</a></li>
+<li>📜 <a href="http://raganwald.com/2015/04/01/partial-application.html">Partial Application in ECMAScript 2015 — Ragan Wald</a></li>
+<li>📜 <a href="https://joecortopassi.com/articles/functional-composition-in-javascript/">Functional Composition in Javascript — Joe Cortopassi</a></li>
+<li>📜 <a href="https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536">So You Want to be a Functional Programmer pt. I — Charles Scalfani</a></li>
+<li>📜 <a href="https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-2-7005682cec4a">So You Want to be a Functional Programmer pt. II — Charles Scalfani</a></li>
+<li>📜 <a href="https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-3-1b0fd14eb1a7">So You Want to be a Functional Programmer pt. III — Charles Scalfani</a></li>
+<li>📜 <a href="https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-4-18fbe3ea9e49">So You Want to be a Functional Programmer pt. IV — Charles Scalfani</a></li>
+<li>📜 <a href="https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-5-c70adc9cf56a">So You Want to be a Functional Programmer pt. V — Charles Scalfani</a></li>
+<li>📜 <a href="https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch3.md">Functional-Light JavaScript Chapter 3: Managing Function Inputs — Kyle Simpson</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Wl2ejJOqHUU">Compose vs Pipe: Functional Programming in JavaScript — Chyld Studios</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=jigHxo9YR30">JavaScript Functional Programing: Compose — Theodore Anderson</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=mth5WpEc4Qs">Function Composition - Functional JavaScript — NWCalvank</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Uam37AlzPYw">JavaScript Function Composition Explained — Theodore Anderson</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=VGB9HbL1GHk">Let’s code with function composition — Fun Fun Function</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=DzLkRsUN2vE">Partial Application vs. Currying — NWCalvank</a></li>
+<li>🎥 <a href="https://www.youtube.com/watch?v=jkebgHEcvac">JavaScript Partial Application — Theodore Anderson</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p>
+<hr>
+<h2>33. Clean Code</h2>
+<h3>Bài viết</h3>
+<ul>
+<li>📜 <a href="https://github.com/ryanmcdermott/clean-code-javascript">Clean Code concepts adapted for JavaScript — Ryan McDermott</a></li>
+<li>📜 <a href="https://blog.risingstack.com/javascript-clean-coding-best-practices-node-js-at-scale/">JavaScript Clean Coding Best Practices — András Tóth</a></li>
+<li>📜 <a href="https://medium.com/@kevin_peters/function-parameters-in-javascript-clean-code-4caac109159b">Function parameters in JavaScript Clean Code — Kevin Peters</a></li>
+<li>📜 <a href="https://css-tricks.com/clean-code-javascript/">Clean Code JavaScript — Sarah Drasner</a></li>
+<li>📜 <a href="https://codeburst.io/keeping-your-code-clean-d30bcffd1a10">Keeping your code clean — Samuel James</a></li>
+<li>📜 <a href="https://www.sitepoint.com/modern-javascript-best-practices/">Best Practices for Using Modern JavaScript Syntax — M. David Green</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/watch?v=Mus_vwhTCq0">JavaScript Pro Tips - Code This, NOT That</a></li>
+</ul>
+<p><strong><a href="#m%E1%BB%A5c-l%E1%BB%A5c">⬆ Lên đầu trang</a></strong></p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:80px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHFmpSzi4H/xAAbEAACAgMBAAAAAAAAAAAAAAABAgARAwQSIf/aAAgBAQABBQK/BfVTUwh1TEA3Cz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQQf/aAAgBAgEBPwGn/8QAGxAAAwACAwAAAAAAAAAAAAAAAAERECIxUYH/2gAIAQEABj8CpHPMO9lexwj/xAAbEAADAQADAQAAAAAAAAAAAAAAAREhMUFR8f/aAAgBAQABPyGeY7EbVQrwZ7uYhd9atR8o/9oADAMBAAIAAwAAABCwz//EABYRAQEBAAAAAAAAAAAAAAAAABEBEP/aAAgBAwEBPxCBn//EABYRAQEBAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxBExP/EAB4QAAICAQUBAAAAAAAAAAAAAAERACExQVFhcYGR/9oACAEBAAE/EFqE1Q3hAB2QZci4RnL5KPgR1NHpVUCo3AvE/9k=" alt="Le Van Son" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><img loading="lazy" width="80" height="50" srcset="/experience/static/bc151f15f8bec4d17f7ee78c598688eb/970a1/profile-pic.jpg 1x,
+/experience/static/bc151f15f8bec4d17f7ee78c598688eb/73ea3/profile-pic.jpg 1.5x,
+/experience/static/bc151f15f8bec4d17f7ee78c598688eb/4ce8f/profile-pic.jpg 2x,
+/experience/static/bc151f15f8bec4d17f7ee78c598688eb/b57c4/profile-pic.jpg 3x" src="/experience/static/bc151f15f8bec4d17f7ee78c598688eb/970a1/profile-pic.jpg" alt="Le Van Son" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Le Van Son</strong>.<!-- --> <a href="https://twitter.com/sonprimarynet">You should follow him on Twitter</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li></li><li></li></ul></main><footer>© <!-- -->2019<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"33-concept-javascript-240","path":"/33-concept-javascript/"};window.dataPath="636/path---33-concept-javascript-240-279-bA1kgF6J86EEOb49HjmkRyKCk";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-2dbad5151491a83c642c.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-78f9e4dea04737fa062d.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3d09bd6d550f756e9c6c.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1ae0c7f660c9d22ed3c4.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a8e57becfed1518c6cd6.js"],"pages-manifest":["/pages-manifest-9eb93bc686251d4211d7.js"]};/*]]>*/</script><script src="/experience/component---src-templates-blog-post-js-3d09bd6d550f756e9c6c.js" async=""></script><script src="/experience/0-0180cd94ef2497ac7db8.js" async=""></script><script src="/experience/app-2dbad5151491a83c642c.js" async=""></script><script src="/experience/styles-565f081c8374bbda155f.js" async=""></script><script src="/experience/webpack-runtime-3cca2b0c33b2ff29a237.js" async=""></script></body></html>
