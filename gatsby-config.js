@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/experience",
   siteMetadata: {
     title: `FullStackJs`,
     author: `Le Van Son`,
