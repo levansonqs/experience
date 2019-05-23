@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `FullStackJs`,
     author: `Le Van Son`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `javascript, javascript tiếng việt, javascript nâng cao.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `sonprimarynet`,

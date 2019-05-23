@@ -1,28 +1,13 @@
 ---
-title: 33 concept javascript
+title: 33 khái niệm javascript
 date: "2019-05-21"
 spoiler: Four principles to set you on the right path.
+description: javascript, javascript tiếng việt, javascript nâng cao
 ---
 
 ## Giới thiệu
 
-Repository này được tạo ra với mục đích giúp các nhà phát triển nắm vững các khái niệm trong JavaScript. Nó không phải là bắt buộc, nhưng là một hướng dẫn cho các nghiên cứu trong tương lai. Repo này được viết bởi [Stephen Curtis](https://twitter.com/stephenthecurt) và bạn có thể đọc nó [ở đây](https://medium.com/@stephenthecurt/33-fundamentals-every-javascript-developer-should-know-13dd720a90d1).
-
-## Cộng đồng
-
-Vui lòng gửi PR để thêm liên kết tới bản tóm tắt hoặc bài đánh giá của riêng bạn. Nếu bạn muốn dịch repo sang ngôn ngữ mẹ đẻ của bạn, hãy làm thoải mái nhé.
-
-Tất cả bản dịch cho repo này sẽ được liệt kê bên dưới:
-
-- [Chinese](https://github.com/stephentian/33-js-concepts) — Re Tian
-- [Portuguese-BR](https://github.com/tiagoboeing/33-js-concepts) — Tiago Boeing
-- [Korean](https://github.com/yjs03057/33-js-concepts.git) — Suin Lee
-- [Spanish](https://github.com/adonismendozaperez/33-js-conceptos) — Adonis Mendoza
-- [Turkish](https://github.com/ilker0/33-js-concepts) — İlker Demir
-- [Russian](https://github.com/gumennii/33-js-concepts) — Mihail Gumennii
-- [Tiếng Việt](https://github.com/nguyentranchung/33-js-concepts) — Nguyễn Trần Chung
-
----
+Repository này được tạo ra với mục đích tóm tắt kinh nghiệm quả bản thân trong qúa trình làm việc với javascript
 
 ## Mục lục
 
