@@ -1,5 +1,5 @@
 ---
-title: 33 khái niệm javascript
+title: 33 khái niệm mà bất cứ JavaScript Developer nên biết
 date: "2019-05-21"
 spoiler: Four principles to set you on the right path.
 description: javascript, javascript tiếng việt, javascript nâng cao
@@ -8,6 +8,8 @@ description: javascript, javascript tiếng việt, javascript nâng cao
 ## Giới thiệu
 
 Repository này được tạo ra với mục đích tóm tắt kinh nghiệm quả bản thân trong qúa trình làm việc với javascript
+
+Nguồn: https://github.com/leonardomso/33-js-concepts
 
 ## Mục lục
 
