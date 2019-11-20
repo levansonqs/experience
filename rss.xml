@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FullStackJs]]></title><description><![CDATA[javascript, javascript tiếng việt, javascript nâng cao.]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Mon, 16 Sep 2019 07:26:23 GMT</lastBuildDate><item><title><![CDATA[React tối ưu performance cho dự án]]></title><description><![CDATA[Giới thiệuBài viết này tóm tắc kinh nghiệm bản thân trong quá trình làm việc với react. Reactjs là thư viện render ui do facebook phát triển…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//react-performance/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//react-performance/</guid><pubDate>Mon, 16 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Giới thiệu&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FullStackJs]]></title><description><![CDATA[javascript, javascript tiếng việt, javascript nâng cao.]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Wed, 20 Nov 2019 03:53:44 GMT</lastBuildDate><item><title><![CDATA[BigO]]></title><description><![CDATA[Giới thiệuBigO là một những khái niệm quan trọng mà một developer nên nắm để viết code tốt hơn.
+Một lập trình viên tốt là viết code để mình…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//BigO/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//BigO/</guid><pubDate>Wed, 20 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Giới thiệu&lt;/h2&gt;
+&lt;p&gt;BigO là một những khái niệm quan trọng mà một developer nên nắm để viết code tốt hơn.
+Một lập trình viên tốt là viết code để mình và người khác có thể đọc và có thể mở rộng.&lt;/p&gt;
+&lt;h2&gt;Mục lục&lt;/h2&gt;
+&lt;h3&gt;1. Khái niệm&lt;/h3&gt;
+&lt;h3&gt;2. Cách tính BigO&lt;/h3&gt;
+&lt;h3&gt;3. Tài liệu tham khảo&lt;/h3&gt;
+&lt;h2&gt;1. Khái niệm&lt;/h2&gt;
+&lt;p&gt;BigO là một cách để đánh giá mức độ scale của code. code có BigO càng thấp thì mức độ scales dự án rất cao.&lt;/p&gt;
+&lt;img src=&quot;https://www.cdn.geeksforgeeks.org/wp-content/uploads/mypic.png&quot;&gt;
+&lt;p&gt;Như trong sơ đồ ta thấy dữ liệu đầu vào là n càng lớn thì những bigo tốt là có thời gian thực hiên tăng thấp.&lt;/p&gt;
+&lt;p&gt;O(1) tốt hơn O(logn),
+O(logn) tốt hơn O(n),…&lt;/p&gt;
+&lt;h2&gt;2. Các tính BigO&lt;/h2&gt;
+&lt;p&gt;BigO càng nhỏ là code càng tốt vậy làm sao để tính BigO của chương trình. có 4 rule để tính BigO&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Tính trường hợp tệ nhất&lt;/li&gt;
+&lt;li&gt;Bỏ hằng số&lt;/li&gt;
+&lt;li&gt;Phụ thuộc vào nhiều input&lt;/li&gt;
+&lt;li&gt;Lượt bỏ thành phần nhở hơn
+vi dụ:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function sumArray(a, b){
+  let s = 0; O(1)
+  for (let i = 0; i &amp;lt; a.length; i ++){
+    s+=a[i]; O(n) n = a.length
+  }
+
+  for (let i = 0; i &amp;lt; b.length; i ++){
+    s+=b[i]; O(m) m = b.length
+  }
+
+  return s; O(1)
+}
+
+const a = [1,2,3,4,5]; O(1)
+const b = [2,1,2,4,5]; O(1)
+
+sumArray(a,b);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Vậy theo quy tắt ta có BigO của chương trình là: O(m) + O(m)&lt;/p&gt;
+&lt;h2&gt;3. Tham khảo&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bigocheatsheet.com/&quot;&gt;https://www.bigocheatsheet.com/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React tối ưu performance cho dự án]]></title><description><![CDATA[Giới thiệuBài viết này tóm tắc kinh nghiệm bản thân trong quá trình làm việc với react. Reactjs là thư viện render ui do facebook phát triển…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//react-performance/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//react-performance/</guid><pubDate>Mon, 16 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Giới thiệu&lt;/h2&gt;
 &lt;p&gt;Bài viết này tóm tắc kinh nghiệm bản thân trong quá trình làm việc với react. Reactjs là thư viện render ui do facebook phát triển ban đầu chỉ dành cho những kỹ sư facebook sử dụng react nên tài liệu cũng rất khó hiểu. mình làm được 2 năm nhưng vẫn chưa nắm hết api.&lt;/p&gt;
 &lt;p&gt;React được xây dụng trên ngôn ngữ javascript nên cũng cần nắm vũng các kiến thức javascript và mới nhất là chuẩn ES6.&lt;/p&gt;
 &lt;p&gt;-&gt; &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript&lt;/a&gt;
